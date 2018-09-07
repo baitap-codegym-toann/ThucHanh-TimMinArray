@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min</title>
+</head>
+<body>
+<script>
+let arr1=[35,2,3,4,6,8,9];
+let arr2=[2,5,6,2,1,33,2];
+let arr3=[];
+
+
+function getMinInArray(array) {
+    let minindex = -1;
+    let min = array[0];
+    for (let i = 0;i<array.length;i++){
+        if (array[i]<min){
+            min = array[i];
+            minindex = i
+        }
+    }
+    return minindex+","+min;
+}
+
+    
+
+let output = getMinInArray(arr1).split(",");
+if (Number(output[0]) === -1){
+    alert("array rỗng!");
+}else {
+    alert("min is "+(Number(output[1])));
+}
+</script>
+</body>
+</html>
